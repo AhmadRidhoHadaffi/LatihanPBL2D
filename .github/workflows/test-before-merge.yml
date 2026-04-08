@@ -20,10 +20,11 @@ jobs:
 
       - name: Install HTMLHint & Stylelint
         run: |
-          npm install -g htmlhint stylelint stylelint-config-standard
+            npm init -y
+            npm install htmlhint stylelint stylelint-config-standard
 
       - name: Periksa HTML
-        run: htmlhint "**/*.html"
+        run: npx htmlhint "**/*.html"
 
       - name: Periksa CSS
-        run: stylelint "**/*.css"
+        run: npx stylelint "**/*.css"
